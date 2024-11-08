@@ -1,0 +1,31 @@
+{% extends 'master.html' %}
+
+{% block Title%}
+    <title>services</title>
+{% endblock %}
+{#  add a closing block for the content#}
+{% block content %}
+    <h2 class="text-center text-success">services offered by gms:</h2>
+    {% for s in services %}
+        <p>{{ s}}</p>  
+{#	the variable s is supposed to display stuff in the website  make sure its in the curly braces#}
+{% endfor %}
+    <h3>ksh{{ price }}</h3>
+    <h3>on date{{ date }}</h3>
+{% if price > 8000 %}
+    <p>our best price in town for december</p>
+ 
+{% endif %} 
+    {% if price > 5000 %}
+        <p> best prices</p>
+    	
+    {% else %}
+    	<p> contact us for  enquiries</p>
+    {% endif %} 
+    
+    
+{#    use ctrl +space after typing for and if #}
+    {#remove p to use shortcut    <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium amet animi consectetur doloribus eligendi fuga quia, rerum sit vel. Ea nulla quaerat similique? Adipisci aperiam cum est obcaecati sed?</span><span>Ab accusantium, commodi consequatur cumque debitis ducimus eum eveniet ex excepturi expedita facilis illum in inventore ipsam iste laborum libero maxime nemo possimus quae quis sapiente sed soluta tempore ut!</span></p>#}
+{% endblock %}
+{# dealing with static files- any image not uploaded by users while media is any image uploaded by user#}
+{#ie filters , images#}

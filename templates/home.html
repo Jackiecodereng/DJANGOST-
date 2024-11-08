@@ -1,0 +1,28 @@
+{## remove everything from the home page since its in the master#}
+{% extends 'master.html' %}
+{% load static %}
+{# also add here#}
+{% block Title%}
+    <title>Home</title>
+{% endblock %}
+{#  add a closing block for the content#}
+{% block content %}
+    <h2 class="text-center text-success"> welcome to my first project</h2>
+    <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium amet animi consectetur doloribus eligendi fuga quia, rerum sit vel. Ea nulla quaerat similique? Adipisci aperiam cum est obcaecati sed?</span><span>Ab accusantium, commodi consequatur cumque debitis ducimus eum eveniet ex excepturi expedita facilis illum in inventore ipsam iste laborum libero maxime nemo possimus quae quis sapiente sed soluta tempore ut!</span></p>
+{#    container div helps content not to go from end to end#}
+    
+    <div class="container">  
+    <div class="row">
+        <div class="col-sm-4 justify-content-center">
+            <img src="{% static 'images/snapchat.png' %}" alt="snapchat">
+        </div>
+        <div class="col-sm-4">
+            <img src="{% static 'images/whatsapp.png' %}" alt="whatsapp">
+        </div>
+        <div class="col-sm-4">
+            <img src="{% static 'images/twitter.png' %}" alt="twitter">
+        </div>
+    </div>
+    
+    </div>
+{% endblock %}
